@@ -10,3 +10,5 @@ int main()
    cout << "Kich thuoc cua double la: " << sizeof(double) <<" byte"<< endl; 
    cout << "Kich thuoc cua wchar_t la: " << sizeof(wchar_t) <<" byte"<< endl;
 }
+
+
