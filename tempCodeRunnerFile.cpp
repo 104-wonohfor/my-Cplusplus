@@ -1,10 +1,17 @@
-
-#include <iostream>
+#include<iostream>
 using namespace std;
-int main()
+int main ()
 {
-    int a;
-    cout <<"Dia chi cua bien a la: "<<&a<<endl;
-    float b;
-    cout<< "Dia chi cua bien b la: "<<&b << endl;
+    int a,b,c;
+    a=5;
+    b=5;
+    c=10;
+    cout <<a<<" = "<<b<<" is "<<(a==b)<<endl;
+    cout <<a<<" = "<<c<<" is "<<(a==c)<<endl;
+    cout <<a<<" khong bang "<<c<<" is "<<(a!=c)<<endl;
+    cout <<a<<" > "<<b<<" is "<<(a>b)<<endl;
+    cout <<a<<" < "<<c<<" is "<<(a<c)<<endl;
+    cout <<a<<" >= "<<b<<" is "<<(a>=b)<<endl;
+    cout <<a<<" <= "<<b<<" is "<<(a<=b)<<endl;
+    cout <<a<<" <= "<<c<<" is "<<(a<=c)<<endl;
 }
