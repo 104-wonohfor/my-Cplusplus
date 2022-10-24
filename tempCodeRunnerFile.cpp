@@ -1,4 +1,3 @@
-
 #include <iostream>
 using namespace std;
 int main()
@@ -8,7 +7,7 @@ int main()
     cout<<"Maximum number of input: ";
     cin>> n;
 
-    for (i = 1; i <=n; ++i)
+    for (i = 1; i <=n; i++)
     {
         cout<<"Input number n"<<i<<": ";
         cin >>num;
@@ -19,7 +18,6 @@ int main()
         sum +=num;
     }
     jump: 
-    cout<<"i = "<<i<<endl;
     avg = sum/(i-1);
     cout<<"Average = "<<sum<<" / "<<"("<<i-1<<")"<<" = "<<avg<<endl;
     

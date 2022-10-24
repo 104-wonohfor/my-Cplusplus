@@ -37,7 +37,7 @@ int main()
     cout<<"Maximum number of input: ";
     cin>> n;
 
-    for (i = 1; i <=n; ++i)
+    for (i = 1; i <=n; i++)
     {
         cout<<"Input number n"<<i<<": ";
         cin >>num;
