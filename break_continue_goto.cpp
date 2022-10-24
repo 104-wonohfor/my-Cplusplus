@@ -1,3 +1,32 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    for (int i = 0; i <= 5; i++)
+    {
+        if (i==3)
+        {
+            break;
+        }
+        cout<<i<<" ";
+    }
+    
+}
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    for (int i = 0; i <= 5; i++)
+    {
+        if (i == 3)
+        {
+            continue;
+        }
+        cout<<i<<" ";
+    }
+    
+}
 
 #include <iostream>
 using namespace std;
@@ -19,7 +48,6 @@ int main()
         sum +=num;
     }
     jump: 
-    cout<<"i = "<<i<<endl;
     avg = sum/(i-1);
     cout<<"Average = "<<sum<<" / "<<"("<<i-1<<")"<<" = "<<avg<<endl;
     
