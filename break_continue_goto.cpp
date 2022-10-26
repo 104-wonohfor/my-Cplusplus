@@ -50,5 +50,4 @@ int main()
     jump: 
     avg = sum/(i-1);
     cout<<"Average = "<<sum<<" / "<<"("<<i-1<<")"<<" = "<<avg<<endl;
-    
 }
