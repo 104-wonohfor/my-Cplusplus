@@ -1,32 +1,22 @@
 #include <iostream>
 using namespace std;
 
-int prime(int n)
+float tinh(float a, float b,float tong,float hieu)
 {
-    int i;
-    for (int i = 2; i <= n; ++i)
-    {
-        if (n%i==0)
-        {
-            return 1;
-        }
-        return 0;
-    }
-    
+    tong = a+b;
+    hieu = a-b;
+    cout<<a<< " + "<<b<<" = "<<tong<<endl;
+    cout<<a<< " - "<<b<<" = "<<hieu<<endl;
 }
-
 int main()
-{
-    int n;
-    int flag = 0;
-    cout<<"Nhap so: ";
-    cin>>n;
-
-    flag = prime(n);
-    if (flag == 0){
-        cout<<n<<" is a prime number"<<endl;
-    }
-    else{
-    cout<<n<<" is not a prime number"<<endl;
-    }
+{    
+    float a =4.5, b=6.0,tong,hieu;
+    tinh(a,b,tong,hieu);
+    float tong_1 = tong;
+    cout<<tong_1<<endl;
+    cout<<a<<endl;
+    float c =6.5,d=6.0;
+    tinh(c,d,tong,hieu);
+    float tong_moi =tong;
+    cout<<tong_moi<<endl;
 }
