@@ -1,6 +1,35 @@
 #include <iostream>
 using namespace std;
 
+int factorial(int n){
+    if (n>1){
+        return n*factorial(n-1);
+    }
+    else{
+        return 1;
+    }
+}
+
+int main (){
+    int n, result;
+    cout<<"Input a number: ";
+    cin>>n;
+    if (n<0){
+        do{
+            cout<<"Number must be a positive interger!"<<endl;
+            cout<<"Input a number: ";
+            cin>>n;
+        } while (n<0);
+    }
+    
+    result = factorial(n);
+    cout<<n<<"! = "<<result<<endl;
+}
+
+
+#include <iostream>
+using namespace std;
+
 int Fibonacci(int n){
     if (n == 0){
         return 0;
@@ -23,10 +52,8 @@ int main(){
         cin>>n;
     } while (n<=2);
     }
-
     cout<<"Fibonacci Series : ";
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++){
         cout<<Fibonacci(i)<<" ";
     }
 }
