@@ -1,22 +1,27 @@
+
 #include <iostream>
 using namespace std;
-
-float tinh(float a, float b,float tong,float hieu)
+ 
+void display(int var1, double var2)
 {
-    tong = a+b;
-    hieu = a-b;
-    cout<<a<< " + "<<b<<" = "<<tong<<endl;
-    cout<<a<< " - "<<b<<" = "<<hieu<<endl;
+    cout<<"INT number is: "<<var1;
+    cout<<" and DBL number is: "<<var2<<endl;
 }
+void display(double var)
+{
+    cout<<"DBL number is: "<<var<<endl;
+}
+void display(int var)
+{
+    cout<<"INT number is: "<<var<<endl;
+}
+
 int main()
-{    
-    float a =4.5, b=6.0,tong,hieu;
-    tinh(a,b,tong,hieu);
-    float tong_1 = tong;
-    cout<<tong_1<<endl;
-    cout<<a<<endl;
-    float c =6.5,d=6.0;
-    tinh(c,d,tong,hieu);
-    float tong_moi =tong;
-    cout<<tong_moi<<endl;
+{
+    int a =6;
+    double b = 6.8;
+
+    display(a);
+    display(b);
+    display(a,b);
 }
