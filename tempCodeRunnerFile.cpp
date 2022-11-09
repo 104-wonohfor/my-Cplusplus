@@ -1,32 +1,17 @@
 #include <iostream>
 using namespace std;
-
-int Fibonacci(int n){
-    if (n == 0){
-        return 0;
-    }
-    else if (n == 1){
-        return 1;
-    }
-    return Fibonacci(n-1)+Fibonacci(n-2);
-}
-
 int main(){
-    int n;
-    int i =0;
-    cout<<"Enter the number of term of series: ";
-    cin>>n;
-    if(n<2){do
-    {
-        cout<<"Input number must be greater than 2!"<<endl;
-        cout<<"Enter the number of term of series: ";
-        cin>>n;
-    } while (n<=2);
-    }
+    int Mang1Chieu [10];
+    int a[4] = {0,1,2,3};
+    int b[] = {3,4,5,6,7,8,9};
+    int c[3] = {0};
 
-    cout<<"Fibonacci Series : ";
-    for (int i = 0; i < n; i++)
-    {
-        cout<<Fibonacci(i)<<" ";
-    }
+    cout<<a[3]<<endl;
+    cout<<b[2]<<endl;
+    cout<<c[2]<<endl;
+
+    cout<<Mang1Chieu[0]<<endl;
+    cout<<a[12]<<endl;
+    cout<<a[-1]<<endl;
+    cout<<c[-1]<<endl;
 }
