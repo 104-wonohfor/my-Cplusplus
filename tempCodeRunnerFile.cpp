@@ -1,17 +1,31 @@
 #include <iostream>
-using namespace std;
+using namespace std; 
+
+void ChangeArray(int a[]){
+    a[2] = 99;
+}
 int main(){
-    int Mang1Chieu [10];
-    int a[4] = {0,1,2,3};
-    int b[] = {3,4,5,6,7,8,9};
-    int c[3] = {0};
+    int DEC;
+    #define MAX 5
 
-    cout<<a[3]<<endl;
-    cout<<b[2]<<endl;
-    cout<<c[2]<<endl;
-
-    cout<<Mang1Chieu[0]<<endl;
-    cout<<a[12]<<endl;
-    cout<<a[-1]<<endl;
-    cout<<c[-1]<<endl;
+    int arrayA[MAX] = {5,4,3,2,1};
+    cout<<"arrayA before changing: ";
+    for (int i = 0; i < MAX; i++){
+        cout<<arrayA[i]<<" ";
+    }
+    cout<<"\nAddress of each element in arrayA (in DEC): ";
+    for (int i = 0; i < MAX; i++){
+        DEC = (int) &arrayA[i];
+        cout<<DEC<<"  ";
+    }       
+    ChangeArray(arrayA);
+    cout<<"\narrayA after changing: ";
+    for (int i = 0; i < MAX; i++){
+        cout<<arrayA[i]<<" ";
+    } 
+    cout<<"\nAddress of each element in arrayA (in DEC): ";
+    for (int i = 0; i < MAX; i++){
+        DEC = (int) &arrayA[i];
+        cout<<DEC<<"  ";
+    }       
 }
