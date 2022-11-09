@@ -1,31 +1,32 @@
 #include <iostream>
-using namespace std; 
-
-void ChangeArray(int a[]){
-    a[2] = 99;
+using namespace std;
+int checkPrime(int n){
+    if (n <= 1)
+        return 0;
+    for (int i = 2; i < n; i++)
+        if (n % i == 0)
+            return 0;
+    return 1;
 }
-int main(){
-    int DEC;
-    #define MAX 5
 
-    int arrayA[MAX] = {5,4,3,2,1};
-    cout<<"arrayA before changing: ";
+int main(){
+    #define MAX 8
+    int arrayA[MAX] = {1,2,5,14,20,7,9,19};
+    int arrayB[MAX]= {};
+    cout<<"arrayA: ";
     for (int i = 0; i < MAX; i++){
         cout<<arrayA[i]<<" ";
     }
-    cout<<"\nAddress of each element in arrayA (in DEC): ";
+    int k =0;
+
     for (int i = 0; i < MAX; i++){
-        DEC = (int) &arrayA[i];
-        cout<<DEC<<"  ";
-    }       
-    ChangeArray(arrayA);
-    cout<<"\narrayA after changing: ";
-    for (int i = 0; i < MAX; i++){
-        cout<<arrayA[i]<<" ";
-    } 
-    cout<<"\nAddress of each element in arrayA (in DEC): ";
-    for (int i = 0; i < MAX; i++){
-        DEC = (int) &arrayA[i];
-        cout<<DEC<<"  ";
-    }       
+        if (checkPrime(arrayA[i]) == 1){
+            arrayB[k] = arrayA[i];
+            k++;
+        }
+    }
+    cout<<"\narrayB: ";
+    for (int i = 0; i < k; i++){
+        cout<<arrayB[i]<<" ";
+    }
 }

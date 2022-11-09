@@ -126,3 +126,68 @@ int main(){
 
 // => Khi thay đổi giá trị phần tử trong mảng, 
 // địa chỉ của phần tử bị thay đổi vẫn được giữ nguyên.
+
+
+
+// Tìm xem phần tử x có nằm trong mảng a kích thước n hay không?
+// Nếu có thì nó nằm ở vị trí nào?
+#include <iostream>
+using namespace std;
+
+int main(){
+    #define MAX 5
+    char arrayA[] = "Thanga";
+    char letter;
+    int  boolean=0;
+    
+    cout<<"Enter a letter to found: ";
+    cin>>letter;
+
+    for (int i = 0; i < sizeof(arrayA); i++){
+        if (arrayA[i] == letter){
+            cout<<"Letter '"<<letter<<"' is in position: "<<"arrayA["<<i<<"]"<<endl;
+            boolean=1;
+        }
+    }
+   
+    if (boolean == 0){
+        cout<<"Letter '"<<letter<<"' not in arrayA"<<endl;
+    }
+}
+
+
+// Cho trước mảng a, số lượng phần tử na. 
+// Tách các số nguyên tố có trong mảng a vào mảng b.
+#include <iostream>
+using namespace std;
+int checkPrime(int n){
+    if (n <= 1)
+        return 0;
+    for (int i = 2; i < n; i++)
+        if (n % i == 0)
+            return 0;
+    return 1;
+}
+
+int main(){
+    #define MAX 8
+    int arrayA[MAX] = {1,2,5,14,20,7,9,19};
+    int arrayB[MAX]= {};
+    cout<<"arrayA: ";
+    for (int i = 0; i < MAX; i++){
+        cout<<arrayA[i]<<" ";
+    }
+    int k =0;
+
+    for (int i = 0; i < MAX; i++){
+        if (checkPrime(arrayA[i]) == 1){
+            arrayB[k] = arrayA[i];
+            k++;
+        }
+    }
+    cout<<"\narrayB: ";
+    for (int i = 0; i < k; i++){
+        cout<<arrayB[i]<<" ";
+    }
+}
+
