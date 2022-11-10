@@ -1,32 +1,38 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-int checkPrime(int n){
-    if (n <= 1)
-        return 0;
-    for (int i = 2; i < n; i++)
-        if (n % i == 0)
-            return 0;
-    return 1;
+
+void swap(int *a,int *b){
+	int temp=*a;
+	*a=*b;
+	*b=temp;
 }
-
+int partition(int arr[],int l,int h){
+    h= 0;
+	int x=arr[h];
+	int i=l-1;
+	for(int j=l; j<=h-1; j++){
+		if(arr[j]<=x){
+			i++;
+			swap(&arr[i],&arr[j]);
+		}
+	}
+	swap(&arr[i+1],&arr[h]);
+	return(i+1);
+}
+void quicksort(int arr[],int l,int h){
+	if(l<h){
+		int p=partition(arr,l,h);
+		quicksort(arr,l,p-1);
+		quicksort(arr,p+1,h);
+	}
+}
 int main(){
-    #define MAX 8
-    int arrayA[MAX] = {1,2,5,14,20,7,9,19};
-    int arrayB[MAX]= {};
-    cout<<"arrayA: ";
-    for (int i = 0; i < MAX; i++){
-        cout<<arrayA[i]<<" ";
-    }
-    int k =0;
-
-    for (int i = 0; i < MAX; i++){
-        if (checkPrime(arrayA[i]) == 1){
-            arrayB[k] = arrayA[i];
-            k++;
+    #define n 10
+    int arrayA[n] = {7,5,9,19,12,5,2,5,5,10};
+    partition(arrayA,0,n);
+    quicksort(arrayA,0,n);
+    cout<<"\narrayA: ";
+        for (int k = 0; k < n; k++){
+        cout<<arrayA[k]<<" ";
         }
-    }
-    cout<<"\narrayB: ";
-    for (int i = 0; i < k; i++){
-        cout<<arrayB[i]<<" ";
-    }
 }
