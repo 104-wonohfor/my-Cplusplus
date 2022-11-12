@@ -2,6 +2,30 @@
 #include <cstring>
 using namespace std;
 int main(){
+    string str1 = "Apple";
+    string str2 = "apple";
+    string str3 = "apples";
+    string str4 = "orange";
+
+    string str5 = str1; cout<<str5<<endl;
+
+    // seem toán tử quan hệ trong string là so sánh độ lớn trong mã ASCII
+    bool t1 = (str1 == str2); cout<<t1<<endl;
+    bool t2 = (str1 != str2); cout<<t2<<endl;
+    bool t3 = (str1 < str2); cout<<t3<<endl;
+    bool t4 = (str4 > str3); cout<<t4<<endl;
+
+    string str6 = str2 + " " +  str4; cout<<str6<<endl;
+
+    string myMsg = "How are you doing?";
+    cout<<myMsg[4]<<" "<<myMsg[12]<<myMsg[13]<<myMsg[16]<<endl;
+}
+
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+int main(){
     // Hàm s.length() - Trả về số lượng ký tự trong string s.
     string str1 = "VoDucThang";
     cout<<"length of str1: "<<str1.length()<<endl;
