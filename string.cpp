@@ -60,6 +60,7 @@ int main(){
     str6.replace(5,10,"101010101010101010103");
     cout<<"str6 after changed: "<<str6<<endl; // Tức là xóa n ký tự bắt đầu từ x, và
                                               // chèn thêm chuỗi (có thể dài, ngắn hơn n ký tự)
+                                              
     string str7 = "Hello World, Hello 104, Welcome to C++";
     str7.replace(5,10,"103");
     cout<<"str7 after changed: "<<str7<<endl;
