@@ -15,7 +15,7 @@ int main(){
         bool gioitinh;
         float Toan,Ly,Anh;
     };
-
+    string hoten; float Toan,Ly,Anh;
     DIEM d1 = {4,5};
     SINHVIEN sv1 = {20218217,"104","16/12/2002",true,9.5};
     SINHVIEN sv2 = {20218216,"526","16/12/2003",false,9};
@@ -41,7 +41,8 @@ int main(){
     }
     else if (sv2.gioitinh == 0){
         cout<<"nu"<<endl;
-    }
-    
-    
+    }   
+    cout << "Size of SINHVIEN is: " << sizeof(SINHVIEN) <<" byte"<< endl;
+    cout<<sizeof(hoten)<<endl;
+    cout<<sizeof(Toan);
 }
