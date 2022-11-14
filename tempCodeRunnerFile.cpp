@@ -1,54 +1,47 @@
 #include <iostream>
 using namespace std;
-#define MAXC 100
 
-int CheckNumber(int a[2][3],int x){
-    for (int i = 0; i < 2; i++){
-        for (int j = 0; j < 3; j++){
-            if (a[i][j]==x){
-                return 1;
-            }
-        }
-    }
-    return 0;
-}
-int TongArray(int a[2][3]){
-    int sum=0;
-    for (int i = 0; i < 2; i++){
-        for (int j = 0; j < 3; j++){
-            sum = sum + a[i][j];
-        }
-    }
-    return sum;
-}
-int MaxArray(int a[2][3]){
-    int max = a[0][0];
-    for (int i = 0; i < 2; i++){
-       for (int j = 0; j < 3; j++){
-            if (a[i][j]>=max){
-                max = a[i][j];
-            }
-       }
-    }
-    return max;
-}
 int main(){
-    int result,x,sum,max;
-    int array[2][3] = {{3,4,5},{-11,2,53}};
+    struct DIEM
+    {
+        int x;
+        int y;
+    };
+    struct SINHVIEN
+    {
+        int MSSV;
+        string hoten;
+        string ngaysinh;
+        bool gioitinh;
+        float Toan,Ly,Anh;
+    };
 
-    cout<<"Check number: ";
-    cin>>x;
-    result = CheckNumber(array,x);
-    if (result == 1){
-        cout<<x<<" is in array."<<endl;
+    DIEM d1 = {4,5};
+    SINHVIEN sv1 = {20218217,"104","16/12/2002",true,9.5};
+    SINHVIEN sv2 = {20218216,"526","16/12/2003",false,9};
+
+    cout<<d1.x<<endl;
+    DIEM d2 = d1;
+    cout<<d2.x<<" "<<d2.y<<endl;
+    DIEM d3;
+    d3.x = 10;
+    d3.y = 9.5;
+    cout<<d3.x<<" "<<d3.y<<endl;
+
+    cout<<sv1.MSSV<<endl;
+    if (sv1.gioitinh == 1){
+        cout<<"nam"<<endl;
     }
-    else if (result == 0 ){
-        cout<<x<<" is not in array"<<endl;
+    else if (sv1.gioitinh == 0){
+        cout<<"nu"<<endl;
+    }
+    cout<<sv2.MSSV<<endl;
+    if (sv2.gioitinh == 1){
+        cout<<"nam"<<endl;
+    }
+    else if (sv2.gioitinh == 0){
+        cout<<"nu"<<endl;
     }
     
-    sum = TongArray(array);
-    cout<<"Sum of array: "<<sum<<endl;
-
-    max = MaxArray(array);
-    cout<<"Max number in array is: "<<max<<endl;
+    
 }
