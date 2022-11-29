@@ -3,25 +3,18 @@ using namespace std;
 
 int main()
 {
-    int a=5;
-    int *pa = &a;
+    int arr[2][3] = {{-1,2,5},{2,4,5}};
+    int *parr;
+    parr = (int *) arr;
 
-    cout<<"gia tri cua bien a:"<<endl;
-    cout<<a<<endl;
-    cout<<*pa<<endl;
-    cout<<"dia chi cua bien a:"<<endl;
-    cout<<&a<<endl;
-    cout<<pa<<endl;
-    cout<<"dia chi cua con tro pa:"<<endl;
-    cout<<&pa<<endl;
-
-
-    char *p1;
-	int *p2;
-	float *p3;
-	double *p4;
-	cout<<"Size of char type pointer:"<<sizeof(char *)<<" bytes" <<endl;
-	cout<<"Size of int type pointer:"<<sizeof(int *)<<" bytes" <<endl;
-	cout<<"Size of float type pointer:"<<sizeof(float *)<<" bytes" <<endl;
-	cout<<"Size of double type pointer:"<<sizeof(double *)<<" bytes" <<endl;
+    cout<<"Output array: "<<endl;
+    for (int i = 0; i < 6; i++)
+    {
+        cout<<*(parr+i)<<" ";
+        if (i==2)
+        {
+            cout<<endl;
+        }
+    }
+    
 }
