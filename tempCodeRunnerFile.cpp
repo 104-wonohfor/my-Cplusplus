@@ -1,20 +1,17 @@
 #include <iostream>
 using namespace std;
 
+void PassByValue (int *x)
+{
+    cout<<"Dia chi cua con tro x: "<<&x<<endl;
+    (*x)++;
+}
+
 int main()
 {
-    int arr[2][3] = {{-1,2,5},{2,4,5}};
-    int *parr;
-    parr = (int *) arr;
-
-    cout<<"Output array: "<<endl;
-    for (int i = 0; i < 6; i++)
-    {
-        cout<<*(parr+i)<<" ";
-        if (i==2)
-        {
-            cout<<endl;
-        }
-    }
-    
+    int a=10;
+    cout<<"Dia chi cua bien a: "<<&a<<endl;
+    PassByValue(a);
+    cout<<"Dia chi cua bien a (after): "<<&a<<endl;
+    cout<<"Gia tri cua a: "<<a<<endl;
 }
