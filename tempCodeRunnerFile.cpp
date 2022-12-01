@@ -1,17 +1,25 @@
 #include <iostream>
 using namespace std;
 
-void PassByValue (int *x)
-{
-    cout<<"Dia chi cua con tro x: "<<&x<<endl;
-    (*x)++;
-}
+struct POINT
+{   
+    float x; 
+    float y;
+};
+
 
 int main()
 {
-    int a=10;
-    cout<<"Dia chi cua bien a: "<<&a<<endl;
-    PassByValue(a);
-    cout<<"Dia chi cua bien a (after): "<<&a<<endl;
-    cout<<"Gia tri cua a: "<<a<<endl;
+    POINT *ptr;
+    ptr = new POINT;
+
+    cout<<"Input:"<<endl;
+    cout<<"x: ";cin>>ptr->x;
+    cout<<"y: ";cin>>ptr->y;
+
+    cout<<"==============================="<<endl;
+    cout<<"Output: ("<<ptr->x<<";"<<ptr->y<<")"<<endl;
+
+    delete ptr;
+    ptr =NULL;
 }
